@@ -11,7 +11,7 @@ In an RTLS network, there are three main components and these are;
 
 Mainly, Ultra Wide-Band (UWB) technology is used for communication between these objects. In the end, Gateway objects will process the data and take action accordingly. An example structure is given below.
 
-![System overview](system_overview.png "system_overview")
+![System overview](images/system_overview.png "system_overview")
 
 ## Project Structure
 
@@ -55,7 +55,9 @@ MESSAGE:
 We will analyze the messages and change states of the tags.
 
 ## Roadmap
-- [ ] Basic structure of the project files
+- [X] Basic structure of the project files
+- [X] CMake and google-test initialization
+- [X] State Machine Class Implementation
 - [ ] Tag, anchor device state machines definitions
 - [ ] Test files of tag and anchor devices using [gtest](https://google.github.io/googletest/)
 - [ ] Message generor object that randomly generates MQTT messages from tags and anchors
