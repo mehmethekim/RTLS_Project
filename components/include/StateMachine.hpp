@@ -3,6 +3,7 @@
 #include <string> 
 #include <tuple>
 #include <vector>
+
 using namespace std;
 
 struct State{
@@ -26,6 +27,7 @@ public:
     StateMachine(State start_state);
     void AddTransition(State old_state, State new_state, Event event);
     State ProcessEvent(Event event);
+    State GetCurrentState();
     ~StateMachine() {}
 };
 #endif /* COMPONENTS_INCLUDE_STATEMACHINE */

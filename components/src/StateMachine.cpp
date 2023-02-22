@@ -55,3 +55,7 @@ State StateMachine::ProcessEvent(Event event){
     }
     return current_state_;
 }
+
+State StateMachine::GetCurrentState(){
+    return current_state_;
+}

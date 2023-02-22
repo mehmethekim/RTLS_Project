@@ -7,7 +7,9 @@ add_library(components
 src/Tag.cpp 
 src/Anchor.cpp 
 src/Gateway.cpp
-src/StateMachine.cpp)
+src/StateMachine.cpp
+src/ActiveObject.cpp
+src/MqttClient.cpp)
 
 target_include_directories(${PROJECT_NAME}
     PUBLIC ${PROJECT_SOURCE_DIR}/include)

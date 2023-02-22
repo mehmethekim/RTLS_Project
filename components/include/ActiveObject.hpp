@@ -1,7 +1,8 @@
 #ifndef COMPONENTS_INCLUDE_ACTIVEOBJECT
 #define COMPONENTS_INCLUDE_ACTIVEOBJECT
-#include "StateMachine.h"
+#include "StateMachine.hpp"
 #include <queue>
+#include <thread>
   
 using namespace std;
   
@@ -11,20 +12,16 @@ using namespace std;
  * Event pool to hold incoming events, that can build up. 
  * A thread will run to consume events as they come.
  * 
- * 
  */
 class ActiveObject{
-    private:
-        StateMachine stateMachine_;
+    protected:
+        int obj_id_;
+        StateMachine* stateMachine_;
         State currentState_;
         queue<Event> eventQueue; //Queue that holds incoming events.
-
-        void ProcessEvent(Event event); /*
-            stateMachine.ProcessEvent(currentState_,event)
-        */
+        void ProcessEvent(Event event);
     public:
-        ActiveObject();
-        void Run();
-
+        ActiveObject(int id);
+        // virtual void Run();
 };
 #endif /* COMPONENTS_INCLUDE_ACTIVEOBJECT */

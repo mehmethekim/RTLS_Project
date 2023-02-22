@@ -37,6 +37,4 @@ TEST(StateMachineTest, ChangeStateCorrectly) {
   EXPECT_EQ((state_machine.ProcessEvent(event_one)).name_ , "YELLOW");
   EXPECT_EQ((state_machine.ProcessEvent(event_three)).name_ , "GREEN");
   EXPECT_EQ((state_machine.ProcessEvent(event_two)).name_ , "GREEN");
-
-
 }
