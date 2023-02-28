@@ -13,9 +13,10 @@ class Message{
     };
     Event GetType() const {return type_;}
     Message(Event type):type_{type}{}
+    
     private:
     
-    Event type_ ;
+    Event type_; 
 };
 enum class State_ : uint8_t
     {
