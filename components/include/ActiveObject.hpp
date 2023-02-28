@@ -1,6 +1,6 @@
 #ifndef COMPONENTS_INCLUDE_ACTIVEOBJECT
 #define COMPONENTS_INCLUDE_ACTIVEOBJECT
-#include "StateMachine.hpp"
+#include "HierarchicalStateMachine.hpp"
 #include <queue>
 #include <thread>
   
@@ -16,12 +16,13 @@ using namespace std;
 class ActiveObject{
     protected:
         int obj_id_;
-        StateMachine* stateMachine_;
-        State currentState_;
-        queue<Event> eventQueue; //Queue that holds incoming events.
-        void ProcessEvent(Event event);
+        Hierarchical_State_Machine* stateMachine_;
+        queue<Message*> eventQueue; //Queue that holds incoming events.
+        void ProcessEvent(Message *p_Message);
     public:
         ActiveObject(int id);
+        State_ GetCurrentState();
+        void NotifyEvent(Message *p_Message);
         // virtual void Run();
 };
 #endif /* COMPONENTS_INCLUDE_ACTIVEOBJECT */

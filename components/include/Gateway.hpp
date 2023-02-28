@@ -3,14 +3,13 @@
 
 #include "Tag.hpp"
 #include "Anchor.hpp"
-#include "MqttPublisher.hpp"
-#include "MqttSubscriber.hpp"
+
+#include <mqtt/async_client.h>
 class Gateway{
     private:
         Tag* TagList;
         Anchor* AnchorList;
-        MqttPublisher* mqttPublisher;
-        MqttSubscriber* mqttSubscriber;
+
         void AddTag(int id);
         void AddAnchor(int id);
         void AddMqttPublisher();

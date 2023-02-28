@@ -21,8 +21,6 @@ TEST(HierarchicalStateMachine, Timer) {
     hierarchical_state_machine.On_Message(timer_expired_message);
     EXPECT_EQ(hierarchical_state_machine.Get_Current_State(), State_::YELLOW);
 
-    delete wash_hand_message;
-    delete timer_expired_message;
 }
 
 TEST(HierarchicalStateMachine, WashBeforeInteraction) {
@@ -71,9 +69,6 @@ TEST(HierarchicalStateMachine, InteractAndWashHand) {
     hierarchical_state_machine.On_Message(timer_expired_message);
     EXPECT_EQ(hierarchical_state_machine.Get_Current_State(), State_::YELLOW);
 
-    delete wash_hand_message;
-    delete interact_message;
-    delete timer_expired_message;
 }
 
 

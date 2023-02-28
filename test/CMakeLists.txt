@@ -19,6 +19,7 @@ add_executable(
   test
   StateMachine_test.cc
   HierarchicalStateMachine_test.cc
+  Tag_test.cc
 )
 target_link_libraries(
   test

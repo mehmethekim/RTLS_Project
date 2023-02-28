@@ -31,20 +31,16 @@ void Hierarchical_State_Machine::Next_State(Top_State &r_State)
     p_Current_State = &r_State;
     // Update current_state_type_ with the new state.
     if(dynamic_cast<Red*>(p_Current_State) != nullptr){
-        std::cout << "Red State" << std::endl;
         current_state_type_  = State_::RED;
     }
     //Moved Red to top because Red is also Yellow class
     else if(dynamic_cast<Yellow*>(p_Current_State) != nullptr){
-        std::cout << "Yellow State" << std::endl;
         current_state_type_  = State_::YELLOW;
     }
     else if(dynamic_cast<Green*>(p_Current_State) != nullptr){
-        std::cout << "Green State" << std::endl;
         current_state_type_  = State_::GREEN;
     }
     else if(dynamic_cast<Green_2*>(p_Current_State) != nullptr){
-        std::cout << "Green_2 State" << std::endl;
         current_state_type_  = State_::GREEN_2;
     }
     else{
