@@ -2,15 +2,13 @@
 #include "components/include/Tag.hpp"
 #include "components/include/StateMachine.hpp"
 #include "components/include/ActiveObject.hpp"
+#include "components/include/HierarchicalStateMachine.hpp"
 int main(){
     std::cout<<"Initializing..."<<std::endl;
 
-    Tag * obj1 = new Tag(1);
-    // Tag * obj2 = new Tag(2);
-    // std::thread th1(&Tag::Run, obj1);
-    // std::thread th2(&Tag::Run, obj2);
-    // th1.join(); 
-    // th2.join();
+    Hierarchical_State_Machine hierarchical_state_machine;
+
+    std::cout<<(int)hierarchical_state_machine.Get_Current_State()<<std::endl;
     
     return 0;
 }

@@ -1,5 +1,5 @@
 #include "StateMachine.hpp"
-
+#include <algorithm>
 using namespace std;
 
 StateMachine::StateMachine(State start_state):current_state_{start_state}{
